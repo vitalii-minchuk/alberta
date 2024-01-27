@@ -2,4 +2,21 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color:aqua;
+  background-color: black;
+}
+
+a {
+  color: inherit;
+}
+
+/* react-select */
+
+.react-select-container {
+  background-color: black;
+  color: red;
+}
+
+.react-select__indicator-separator {
+  display: none;
 }

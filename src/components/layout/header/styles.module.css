@@ -1,0 +1,9 @@
+.header {
+    min-height: 2rem;
+    padding: 1rem;
+    background-color: #333333;
+}
+.nav {
+    display: flex;
+    gap: 2rem;
+}

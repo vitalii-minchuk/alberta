@@ -1,48 +1,32 @@
 "use client"
 
-import { useIsMounted } from "@/hooks";
-import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import Select, { SingleValue } from "react-select"
+import type { SingleValue } from "react-select";
+import Select from "react-select"
 
-type TSelectOption = {
-  value: string,
-  label: string
+import { useIsMounted } from "@/hooks";
+import { TSelectOption } from "./types";
+
+interface Props {
+  options: TSelectOption[];
+  value: TSelectOption | null;
+  onSelect: (val: string) => void
 }
 
-export const CustomSelect = () => {
-  const [selectedOption, setSelectedOptions] = useState<TSelectOption | null>(null);
-  const router = useRouter()
-  const searchParams = useSearchParams()
+export const CustomSelect = (props: Props) => {
+  const {options, value, onSelect} = props
   const isMounted = useIsMounted()
-  const currentOption = searchParams.get('test')
-  const options: TSelectOption[] = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
-  ]
 
-  useEffect(() => {
-    if (currentOption) {
-      const option = options.find(el => el.value === currentOption)
-
-      option && setSelectedOptions(option)
-    } else {
-      setSelectedOptions(null)
-    }
-  }, [])
-
-  const handleSelect = (val: SingleValue<TSelectOption>) => {
+  const onChange = (val: SingleValue<TSelectOption>) => {
     if (!val) return
 
-    router.push(`?test=${val.value}`)
-    setSelectedOptions(val)
+    onSelect(val.value)
   }
 
   if (!isMounted) return null
-  
+
   return (
-    <Select options={options}  value={selectedOption}  onChange={handleSelect}/>
-    
+    <Select 
+    className="react-select-container"
+    classNamePrefix="react-select" options={options} value={value} onChange={onChange} />
   )
 }
