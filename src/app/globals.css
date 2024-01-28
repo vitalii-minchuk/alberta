@@ -10,13 +10,50 @@ a {
   color: inherit;
 }
 
+svg {
+  display: block;
+  max-width: 100%;
+  filter:
+  drop-shadow(1rem 0 3rem red);
+  
+}
+
+
 /* react-select */
 
 .react-select-container {
-  background-color: black;
-  color: red;
+  color: white;
 }
 
-.react-select__indicator-separator {
-  display: none;
+.react-select__control {
+  background-color: black !important;
+
+}
+.react-select__value-container {
+
+}
+.react-select__input-container {
+}
+.react-select__input {
+}
+.react-select__single-value {
+  color: white !important;
+
+}
+.react-select__indicators {
+
+}
+.react-select__menu {
+  border: 1px solid red;
+
+}
+.react-select__menu-list {
+  background-color: black;
+
+}
+.react-select__option:hover {
+
+  background-color: pink;
+  color: blue;
+
 }

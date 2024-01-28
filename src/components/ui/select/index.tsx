@@ -12,6 +12,7 @@ interface Props {
   onSelect: (val: string) => void
 }
 
+
 export const CustomSelect = (props: Props) => {
   const {options, value, onSelect} = props
   const isMounted = useIsMounted()
@@ -25,7 +26,8 @@ export const CustomSelect = (props: Props) => {
   if (!isMounted) return null
 
   return (
-    <Select 
+    <Select
+    placeholder=""
     className="react-select-container"
     classNamePrefix="react-select" options={options} value={value} onChange={onChange} />
   )

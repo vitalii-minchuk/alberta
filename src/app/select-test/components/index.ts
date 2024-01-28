@@ -1,2 +1,2 @@
-export * from './ProvidersSelect'
-export * from './SortingSelect'
+export * from './providers-select'
+export * from './sorting-select'

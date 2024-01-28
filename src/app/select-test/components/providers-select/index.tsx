@@ -34,7 +34,7 @@ export const ProvidersSelect = () => {
     const path = `?providerId=${providerId}` + sorting
     router.push(path)
   }
-
+  
   return (
     <CustomSelect options={options} value={selectedProvider} onSelect={handleSelect} />
   )
