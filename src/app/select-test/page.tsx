@@ -8,7 +8,7 @@ export default function SelectTestPage() {
 
         <ProvidersSelect />
         <SortingSelect />
- </Suspense>
+            </Suspense>
         </div>
     )
 }
