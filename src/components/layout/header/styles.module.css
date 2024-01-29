@@ -1,9 +1,14 @@
 .header {
-    min-height: 2rem;
     padding: 1rem;
     background-color: #333333;
 }
+
 .nav {
+    min-height: 50px;
     display: flex;
+    align-items: center;
     gap: 2rem;
 }
+ .nav > a {
+    display: block;
+ }
