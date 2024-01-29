@@ -5,7 +5,6 @@ export default function SelectTestPage() {
     return (
         <div style={{minHeight: '90px'}}>
  <Suspense>
-
         <ProvidersSelect />
         <SortingSelect />
             </Suspense>
