@@ -36,6 +36,6 @@ export const SortingSelect = () => {
   }
 
   return (
-    <CustomSelect options={options} value={selectedSorting} onSelect={handleSelect} />
+     <CustomSelect options={options} value={selectedSorting} onSelect={handleSelect} />
   )
 }
