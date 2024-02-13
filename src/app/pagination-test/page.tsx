@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import Pagination from './components/pagination';
+import Search from './components/search';
  
 export default function PaginationPage() {
 
@@ -9,8 +10,7 @@ export default function PaginationPage() {
         <h1 >Invoices</h1>
       </div>
       <div>
-        {/* <Search placeholder="Search invoices..." />
-        <CreateInvoice /> */}
+        <Search />
       </div>
        {/* <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
         <Table query={query} currentPage={currentPage} />
