@@ -21,9 +21,9 @@ const getImage = async (src: string) => {
 
 export default async function ImgTestPage() {
   const { color, img } = await getImage(
-    "https://plus.unsplash.com/premium_photo-1705317716147-9d8f7ab2ad69?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    "https://dev.jambo8.com/_next/image?url=https%3A%2F%2Fstage.gis-static.com%2Fgames%2FSpribe%2F8ae9549c6e0e483fb4958cad3c53a568.png&w=384&q=100"
   );
-
+console.log(color)
   return (
     <div className={styles.wrapper}>
         <SvgTest />
