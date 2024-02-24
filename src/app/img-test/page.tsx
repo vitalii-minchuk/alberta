@@ -2,6 +2,7 @@ import { getPlaiceholder } from "plaiceholder";
 import { SvgTest } from "./components";
 import styles from './styles.module.css'
 import Image from "next/image";
+import AudioRecorder from "./components/image-upload";
 
 const getImage = async (src: string) => {
   const buffer = await fetch(src).then(async (res) =>
@@ -35,6 +36,7 @@ console.log(color)
             height={200}
           />
           <div style={{height: '200px', width: '200px', backgroundColor: color.hex}} />
+          <AudioRecorder />
     </div>
   )
 }
